@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script>
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
+    ) {
+      window.location.href = "/m/";
+    }
+  </script>
+  <style>
+    .nawbar {
+      margin-left: 5%;
+      height: 100%;
+      width: 80%;
+      z-index: 1;
+      top: -5%;
+      background: rgba(255, 255, 255, 0.75);
+    }
+    body {
+      color: #ffffff;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background-image: url(images/banners_february_2021_red.png);
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    table {
+      table-layout: fixed; /* Фиксированная ширина ячеек */
+      width: 90%; /* Ширина таблицы */
+      height: 60%;
+      background-color: rgba(250, 250, 250, 0.75);
+      border-color: #a4a4a5;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+    td {
+      vertical-align: top;
+      padding: 2% 0px 0px 0px;
+    }
+    textarea {
+      resize: none;
+      border: 0;
+      margin: 10px;
+    }
+    p {
+      margin: 10px;
+      color: #768392;
+    }
+    b {
+      color: #000000;
+    }
+    .button {
+      color: #a4acb6;
+    }
+    input[type="submit"] {
+      margin: 0 0 0 33%;
+      padding: 5px 15px;
+      background: #edeef1;
+      border: 0 none;
+      cursor: pointer;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+  </style>
+  <head>
+    <title>
+      Terms and Conditions
+    </title>
+  </head>
+  <body>
+    <div class="nawbar">
+      <a
+        href="https://www.iubenda.com/terms-and-conditions/17705324"
+        class="iubenda-white no-brand iubenda-noiframe iubenda-embed iubenda-noiframe iub-body-embed"
+        title="Terms and Conditions"
+        >Terms and Conditions</a
+      >
+      <script type="text/javascript">
+        (function (w, d) {
+          var loader = function () {
+            var s = d.createElement("script"),
+              tag = d.getElementsByTagName("script")[0];
+            s.src = "https://cdn.iubenda.com/iubenda.js";
+            tag.parentNode.insertBefore(s, tag);
+          };
+          if (w.addEventListener) {
+            w.addEventListener("load", loader, false);
+          } else if (w.attachEvent) {
+            w.attachEvent("onload", loader);
+          } else {
+            w.onload = loader;
+          }
+        })(window, document);
+      </script>
+    </div>
+  </body>
+</html>

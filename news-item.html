@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="preload"
+			href="./css/splide.min.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<link rel="stylesheet" href="./css/index.css" />
+		<link
+			rel="stylesheet"
+			href="./css/media.css"
+			media="screen and (max-width:1500px)"
+		/>
+		<link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+		<script src="./components/header.js" type="text/javascript" defer></script>
+		<script src="./components/footer.js" type="text/javascript" defer></script>
+		<title>News</title>
+	</head>
+	<body>
+		<div class="wrap">
+			<header-component></header-component>
+			<main class="main-content">
+				<section class="article-container">
+					<div class="news-item article">
+						<div class="news-item__meta">
+							<p class="news-item__tag">Updates</p>
+							<p class="news-item__date">15/11/2022</p>
+						</div>
+						<div class="article__inner-wrap">
+							<img
+								src="./images/blackfriday_en_308.jpg"
+								alt=""
+								class="article__img"
+							/>
+							<h3 class="article__heading">Title title title</h3>
+							<p class="article__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+								at sint fugiat autem aspernatur eligendi eaque atque velit
+								culpa! Odit velit sit praesentium possimus ullam non
+								exercitationem accusamus quia ut. Lorem ipsum dolor sit amet
+								consectetur adipisicing elit. Beatae, at sint fugiat autem
+								aspernatur eligendi eaque atque velit culpa! Odit velit sit
+								praesentium possimus ullam non exercitationem accusamus quia ut.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+								at sint fugiat autem aspernatur eligendi eaque atque velit
+								culpa! Odit velit sit praesentium possimus ullam non
+								exercitationem accusamus quia ut. Lorem ipsum dolor sit amet
+								consectetur adipisicing elit. Beatae, at sint fugiat autem
+								aspernatur eligendi eaque atque velit culpa! Odit velit sit
+								praesentium possimus ullam non exercitationem accusamus quia ut.
+							</p>
+						</div>
+					</div>
+				</section>
+				<!-- latest, not featured news -->
+				<section
+					class="splide featured-news__splide content-wrap"
+					id="news-splide"
+				>
+					<div class="splide__track featured-news__track">
+						<ul class="splide__list featured-news__list">
+							<li class="splide__slide featured-news__item">
+								<div class="featured-item__wrap">
+									<div class="img-wrap">
+										<img
+											src="./images/blackfriday_en_308.jpg"
+											alt=""
+											class="featured-item__img"
+										/>
+									</div>
+									<h3 class="featured-item__heading">
+										Black friday: black friday 1
+									</h3>
+								</div>
+							</li>
+							<li class="splide__slide featured-news__item">
+								<div class="featured-item__wrap">
+									<div class="img-wrap">
+										<img
+											src="./images/nightmare_310.jpg"
+											alt=""
+											class="featured-item__img"
+										/>
+									</div>
+									<h3 class="featured-item__heading">
+										Black friday: black friday 2
+									</h3>
+								</div>
+							</li>
+							<li class="splide__slide featured-news__item">
+								<div class="featured-item__wrap">
+									<div class="img-wrap">
+										<img
+											src="./images/shadow_309.jpg"
+											alt=""
+											class="featured-item__img"
+										/>
+									</div>
+									<h3 class="featured-item__heading">
+										Black friday: black friday 3
+									</h3>
+								</div>
+							</li>
+							<li class="splide__slide featured-news__item">
+								<div class="featured-item__wrap">
+									<div class="img-wrap">
+										<img
+											src="./images/shadow_309.jpg"
+											alt=""
+											class="featured-item__img"
+										/>
+									</div>
+									<h3 class="featured-item__heading">
+										Black friday: black friday 3
+									</h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="splide-navigation featured-news__navigation">
+						<div class="splide__arrows featured-news__arrows">
+							<button
+								class="splide__arrow splide__arrow--prev"
+								aria-label="Previos slide"
+							></button>
+							<ul
+								class="splide__pagination splide__pagination--ltr featured-news__pagination"
+								role="tablist"
+								aria-label="Select a slide to show"
+							></ul>
+							<button
+								class="splide__arrow splide__arrow--next"
+								aria-label="Next slide"
+							></button>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer-component></footer-component>
+		</div>
+		<script src="./js/splide.min.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const slider = new Splide('#news-splide', {
+					type: 'slide',
+					perPage: 3,
+					focus: 'focus',
+					rewind: true,
+					lazyLoad: 'nearby',
+				}).on('pagination:mounted', (data) => {
+					data.items.forEach((item) => {
+						item.button.classList.add('splide__pagination--custom');
+						item.button.classList.add('btn-reset');
+					});
+				});
+
+				slider.mount();
+			});
+		</script>
+	</body>
+</html>

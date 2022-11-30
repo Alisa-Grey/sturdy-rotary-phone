@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="preload"
+			href="./css/splide.min.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<link rel="stylesheet" href="./css/index.css" />
+		<link
+			rel="stylesheet"
+			href="./css/media.css"
+			media="screen and (max-width:1500px)"
+		/>
+		<link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+		<script src="./components/header.js" type="text/javascript" defer></script>
+		<script src="./components/footer.js" type="text/javascript" defer></script>
+		<title>News</title>
+	</head>
+	<body>
+		<header-component></header-component>
+		<main class="main-content">
+			<section class="featured">
+				<div class="featured__content-wrap">
+					<h2 class="featured__heading">Featured news</h2>
+
+					<div class="featured__item">
+						<img
+							src="./images/shadow_309.jpg"
+							alt=""
+							class="featured-item__img"
+						/>
+					</div>
+					<div class="featured__item">
+						<img
+							src="./images/nightmare_310.jpg"
+							alt=""
+							class="featured-item__img"
+						/>
+					</div>
+				</div>
+			</section>
+			<div id="filters" class="filters">
+				<button
+					class="btn-reset filter-btn is-active"
+					onclick="filterByCategory('all', '.news-item__list-view', '.news-list')"
+				>
+					View all
+				</button>
+				<button
+					class="btn-reset filter-btn"
+					onclick="filterByCategory('announcements', '.news-item__list-view', '.news-list')"
+				>
+					Announcements
+				</button>
+				<button
+					class="btn-reset filter-btn"
+					onclick="filterByCategory('events', '.news-item__list-view', '.news-list')"
+				>
+					Events
+				</button>
+				<button
+					class="btn-reset filter-btn"
+					onclick="filterByCategory('updates', '.news-item__list-view', '.news-list')"
+				>
+					Updates
+				</button>
+				<button
+					class="btn-reset filter-btn"
+					onclick="filterByCategory('lore', '.news-item__list-view', '.news-list')"
+				>
+					Lore
+				</button>
+			</div>
+			<div class="news-wrap">
+				<section class="news-list news">
+					<article class="news-item__list-view news-item events">
+						<div class="news-item__img-wrap"></div>
+						<div class="news-item__content-wrap">
+							<h3 class="news-item__heading">Click 'read more'</h3>
+							<p class="news-item__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+								at sint fugiat autem aspernatur eligendi eaque atque velit
+								culpa! Odit velit sit praesentium possimus ullam non
+								exercitationem accusamus quia ut.
+							</p>
+							<div class="news-item__footer">
+								<a class="news-item__btn link-reset" href="./news-item.html">
+									Read more&nbsp;&#65310;
+								</a>
+								<div class="news-item__meta">
+									<p class="news-item__tag">Events</p>
+									<p class="news-item__date">15/11/2022</p>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="news-item__list-view news-item announcements">
+						<div class="news-item__img-wrap"></div>
+						<div class="news-item__content-wrap">
+							<h3 class="news-item__heading">title title title</h3>
+							<p class="news-item__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+								at sint fugiat autem aspernatur eligendi eaque atque velit
+								culpa! Odit velit sit praesentium possimus ullam non
+								exercitationem accusamus quia ut.
+							</p>
+							<div class="news-item__footer">
+								<a class="link-reset news-item__btn">
+									Read more&nbsp;&#65310;
+								</a>
+								<div class="news-item__meta">
+									<p class="news-item__tag">Announcements</p>
+									<p class="news-item__date">15/11/2022</p>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="news-item__list-view news-item updates">
+						<div class="news-item__img-wrap"></div>
+						<div class="news-item__content-wrap">
+							<h3 class="news-item__heading">title title title</h3>
+							<p class="news-item__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+								at sint fugiat autem aspernatur eligendi eaque atque velit
+								culpa! Odit velit sit praesentium possimus ullam non
+								exercitationem accusamus quia ut. Lorem ipsum dolor sit amet
+								consectetur adipisicing elit. Beatae, at sint fugiat autem
+								aspernatur eligendi eaque atque velit culpa! Odit velit sit
+								praesentium possimus ullam non exercitationem accusamus quia ut.
+							</p>
+							<div class="news-item__footer">
+								<a class="link-reset news-item__btn">
+									Read more&nbsp;&#65310;
+								</a>
+								<div class="news-item__meta">
+									<p class="news-item__tag">Updates</p>
+									<p class="news-item__date">15/11/2022</p>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="news-item__list-view news-item updates">
+						<div class="news-item__img-wrap"></div>
+						<div class="news-item__content-wrap">
+							<h3 class="news-item__heading">title title title</h3>
+							<p class="news-item__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+								at sint fugiat autem aspernatur eligendi eaque atque velit
+								culpa! Odit velit sit praesentium possimus ullam non
+								exercitationem accusamus quia ut. Lorem ipsum dolor sit amet
+								consectetur adipisicing elit. Beatae, at sint fugiat autem
+								aspernatur eligendi eaque atque velit culpa! Odit velit sit
+								praesentium possimus ullam non exercitationem accusamus quia ut.
+							</p>
+							<div class="news-item__footer">
+								<a class="link-reset news-item__btn">
+									Read more&nbsp;&#65310;
+								</a>
+								<div class="news-item__meta">
+									<p class="news-item__tag">Updates</p>
+									<p class="news-item__date">15/11/2022</p>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="news-item__list-view news-item updates">
+						<div class="news-item__img-wrap"></div>
+						<div class="news-item__content-wrap">
+							<h3 class="news-item__heading">title title title</h3>
+							<p class="news-item__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+								at sint fugiat autem aspernatur eligendi eaque atque velit
+								culpa! Odit velit sit praesentium possimus ullam non
+								exercitationem accusamus quia ut. Lorem ipsum dolor sit amet
+								consectetur adipisicing elit. Beatae, at sint fugiat autem
+								aspernatur eligendi eaque atque velit culpa! Odit velit sit
+								praesentium possimus ullam non exercitationem accusamus quia ut.
+							</p>
+							<div class="news-item__footer">
+								<a class="link-reset news-item__btn">
+									Read more&nbsp;&#65310;
+								</a>
+								<div class="news-item__meta">
+									<p class="news-item__tag">Updates</p>
+									<p class="news-item__date">15/11/2022</p>
+								</div>
+							</div>
+						</div>
+					</article>
+				</section>
+			</div>
+		</main>
+		<footer-component></footer-component>
+		<script src="./js/splide.min.js"></script>
+		<script src="./js/main.js"></script>
+		<!-- for couch add field shown text and field hidden text -->
+		<script>
+			const textLength = 260;
+			const newsContent = document.querySelectorAll('.news-item__text');
+			newsContent.forEach((item) => {
+				if (item.innerText.length > textLength) {
+					item.innerText = item.innerText.substr(
+						0,
+						item.innerText.length - textLength
+					);
+				}
+			});
+		</script>
+		<script>
+			// Add active class to the current control button (highlight it)
+			toggleActiveClass('.filter-btn', 'is-active');
+			filterByCategory('', '.news-item__list-view', '.news-list');
+		</script>
+		<script>
+			// top feature slider
+			let slideIndex = 0;
+			const showSlides = () => {
+				let i;
+				let slides = document.querySelectorAll('.featured__item');
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = 'none';
+				}
+				slideIndex++;
+				if (slideIndex > slides.length) {
+					slideIndex = 1;
+				}
+				slides[slideIndex - 1].style.display = 'block';
+				setTimeout(showSlides, 4000); // Change image every 2 seconds
+			};
+			showSlides();
+		</script>
+	</body>
+</html>

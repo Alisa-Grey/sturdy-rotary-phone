@@ -1,0 +1,19 @@
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" version="1.0">
+
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_1" fill="#000000" transform="translate(0.000000,24.000000) scale(0.100000,-0.100000)">
+   <path id="svg_2" d="m80,135c0,-60 3,-75 15,-75c12,0 15,15 15,75c0,60 -3,75 -15,75c-12,0 -15,-15 -15,-75z"/>
+   <path id="svg_3" d="m32,128c2,-38 8,-63 16,-66c9,-3 12,14 12,62c0,53 -3,66 -15,66c-13,0 -15,-11 -13,-62z"/>
+   <path id="svg_4" d="m180,120c0,-45 3,-61 13,-57c7,2 12,23 12,57c0,34 -5,55 -12,58c-10,3 -13,-13 -13,-58z"/>
+   <path id="svg_5" d="m130,110c0,-38 4,-50 15,-50c11,0 15,12 15,50c0,38 -4,50 -15,50c-11,0 -15,-12 -15,-50z"/>
+   <path id="svg_6" d="m20,40c0,-6 40,-10 100,-10c60,0 100,4 100,10c0,6 -40,10 -100,10c-60,0 -100,-4 -100,-10z"/>
+  </g>
+  <rect id="svg_10" height="12.66862" width="2.34604" y="5.2434" x="3.20234" stroke="#000" fill="none"/>
+  <rect id="svg_12" height="14.42815" width="2.81525" y="3.42522" x="8.07038" stroke="#000" fill="none"/>
+  <rect id="svg_13" height="9.67742" width="2.40469" y="8.05865" x="13.05572" stroke="#000" fill="none"/>
+  <rect id="svg_14" height="11.43695" width="2.17009" y="6.29912" x="18.04105" stroke="#000" fill="none"/>
+  <rect id="svg_15" height="0.99707" width="19.70674" y="19.4956" x="1.97067" stroke="#000" fill="none"/>
+  <rect id="svg_16" height="3.75367" width="0.64516" y="13.8651" x="3.78885" stroke="#000" fill="none"/>
+ </g>
+</svg>

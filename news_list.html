@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="preload"
+			href="<cms:show k_site_link />css/splide.min.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<link rel="stylesheet" href="<cms:show k_site_link />css/index.css" />
+		<link
+			rel="stylesheet"
+			href="<cms:show k_site_link />css/media.css"
+			media="screen and (max-width:1500px)"
+		/>
+		<link
+			rel="shortcut icon"
+			href="<cms:show k_site_link />favicon.png"
+			type="image/x-icon"
+		/>
+		<script
+			src="<cms:show k_site_link />components/header.js"
+			type="text/javascript"
+			defer
+		></script>
+		<script
+			src="<cms:show k_site_link />components/footer.js"
+			type="text/javascript"
+			defer
+		></script>
+		<title>News</title>
+	</head>
+	<body>
+		<div class="wrap">
+			<header-component></header-component>
+			<main class="main-content news">
+				<div id="filters" class="filters">
+					<button
+						class="btn-reset filter-btn active"
+						onclick="filterSelection('')"
+					>
+						Show all
+					</button>
+					<button
+						class="btn-reset filter-btn"
+						onclick="filterSelection('announcements')"
+					>
+						Announcements
+					</button>
+					<button
+						class="btn-reset filter-btn"
+						onclick="filterSelection('updates')"
+					>
+						Updates
+					</button>
+					<button
+						class="btn-reset filter-btn"
+						onclick="filterSelection('events')"
+					>
+						Events
+					</button>
+					<button
+						class="btn-reset filter-btn"
+						onclick="filterSelection('lore')"
+					>
+						Lore
+					</button>
+				</div>
+				<cms:pages masterpage="news.php" folder="k_folder_name" paginate="0">
+					<article
+						class="news__item news-item--single <cms:show news_category/>"
+					>
+						<div class="tags--single">
+							<p class="details__tag"><cms:show news_category /></p>
+							&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+							<cms:date k_page_date format="jS M, y" />
+						</div>
+						<h3 class="news-item__heading--single">
+							<a href="<cms:show k_page_link/>" class="link-reset"
+								><cms:show k_page_title
+							/></a>
+						</h3>
+						<img
+							src="<cms:show news_image/>"
+							alt="<cms:show news_image_alt/>"
+							class="news-item__img--single"
+						/>
+						<cms:show news_content />
+					</article>
+				</cms:pages>
+			</main>
+			<footer-component></footer-component>
+		</div>
+		<script src="<cms:show k_site_link />js/splide.min.js"></script>
+		<script>
+			// show limited articles
+			const newsContainer = document.querySelector('.news');
+			const loadMore = document.getElementById('more-btn');
+			hiddenClass = 'invisible';
+
+			const showLimitedItems = (maxItems, loadItems, className) => {
+				const items = Array.from(newsContainer.querySelectorAll(className));
+				hiddenItems = Array.from(document.querySelectorAll('.hidden'));
+
+				items.forEach(function (item, index) {
+					if (index > maxItems - 1) {
+						item.classList.add(hiddenClass);
+					}
+				});
+
+				loadMore.addEventListener('click', function () {
+					[].forEach.call(
+						document.querySelectorAll('.' + hiddenClass),
+						function (item, index) {
+							if (index < loadItems) {
+								item.classList.remove(hiddenClass);
+							}
+
+							if (document.querySelectorAll('.' + hiddenClass).length === 0) {
+								loadMore.style.display = 'none';
+							}
+						}
+					);
+				});
+			};
+			// filter news articles
+			const filterSelection = (category) => {
+				const items = document.getElementsByClassName('news-item');
+				if (category === '') {
+					showLimitedItems(2, 2, '.news-item');
+				} else {
+					loadMore.style.display = 'none';
+				}
+
+				for (let i = 0; i < items.length; i++) {
+					removeClass(items[i], 'show');
+					addClass(items[i], 'invisible');
+					if (items[i].className.indexOf(category) > -1)
+						addClass(items[i], 'show');
+					removeClass(items[i], 'invisible');
+				}
+			};
+
+			// Show filtered elements
+			const addClass = (element, name) => {
+				let elementsArr = element.className.split(' ');
+				let namesArr = name.split(' ');
+				for (let i = 0; i < namesArr.length; i++) {
+					if (elementsArr.indexOf(namesArr[i]) == -1) {
+						element.className += ' ' + namesArr[i];
+					}
+				}
+			};
+
+			// Hide elements that are not selected
+			const removeClass = (element, name) => {
+				let elementsArr = element.className.split(' ');
+				let namesArr = name.split(' ');
+				for (let i = 0; i < namesArr.length; i++) {
+					while (elementsArr.indexOf(namesArr[i]) > -1) {
+						elementsArr.splice(elementsArr.indexOf(namesArr[i]), 1);
+					}
+				}
+				element.className = elementsArr.join(' ');
+			};
+
+			// Add active class to the current control button (highlight it)
+			const btnContainer = document.getElementById('filters');
+			const btns = btnContainer.getElementsByClassName('filter-btn');
+			for (let i = 0; i < btns.length; i++) {
+				btns[i].addEventListener('click', function () {
+					const current = document.getElementsByClassName('active');
+					current[0].className = current[0].className.replace(' active', '');
+					this.className += ' active';
+				});
+			}
+			filterSelection('');
+			showLimitedItems(2, 2, '.news-item');
+		</script>
+	</body>
+</html>
