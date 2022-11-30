@@ -11,7 +11,7 @@ class Header extends HTMLElement {
         href="https://darkestafk.com/"
         aria-label="Darkest AFK"
       >
-        <img src="../images/logo.png"/>
+        <img src="./images/logo.png"/>
       </a>
       <div class='burger-container'>
       <input
@@ -73,7 +73,7 @@ class Header extends HTMLElement {
         class="play-link link-reset"
         href="https://darkestafk.onelink.me/yDmA/610af968"
       >
-      <img src="../images/playnow.png"/>
+      <img src="./images/playnow.png"/>
       </a>
       </div>
     </header>
