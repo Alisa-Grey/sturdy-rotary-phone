@@ -30,12 +30,13 @@ class Header extends HTMLElement {
       <nav id="burger-menu" class="nav">
         <ul class="nav-list list-reset">
           <li class="nav-list__item">
-            <a class="nav-list__link link-reset" href="index.html"> HOME </a>
+            <a class="nav-list__link link-reset" href="index.html" tabindex="0"> HOME </a>
           </li>
           <li class="nav-list__item">
             <a
               class="nav-list__link link-reset"
               href="news.html"
+              tabindex="0"
             >
               NEWS
             </a>
@@ -45,6 +46,7 @@ class Header extends HTMLElement {
             <a
               class="nav-list__link link-reset"
               href="community.html"
+              tabindex="0"
             >
               COMMUNITY
             </a>
@@ -53,6 +55,7 @@ class Header extends HTMLElement {
             <a
               class="nav-list__link link-reset"
               href="https://darkestafk.zendesk.com"
+              tabindex="0"
               target="_blank"
             >
               FAQ
@@ -63,6 +66,7 @@ class Header extends HTMLElement {
             <a
               class="nav-list__link link-reset"
               href="media-page.html"
+              tabindex="0"
             >
               MEDIA
             </a>
