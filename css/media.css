@@ -165,6 +165,13 @@
 		background-size: 90%;
 		background-position: center top 0;
 	}
+	@supports (
+		background-image: -webkit-image-set(url('../images/screenframe.webp') 1x)
+	) {
+		.game-features {
+			background-image: -webkit-image-set(url('../images/screenframe.webp') 1x);
+		}
+	}
 	.game-features__slide img {
 		height: 85% !important;
 	}
@@ -376,6 +383,13 @@
 		background-size: cover;
 		background-position-y: -200px;
 	}
+	@supports (
+		background-image: -webkit-image-set(url('../images/bg-main-s1.webp') 1x)
+	) {
+		.heros {
+			background-image: -webkit-image-set(url('../images/bg-main-s1.webp') 1x);
+		}
+	}
 	.hero__btn-container {
 		margin-top: 80%;
 	}
@@ -544,6 +558,16 @@
 		background-size: 103%;
 		background-position-x: -4px;
 	}
+	@supports (
+		background-image: -webkit-image-set(url('../images/gold-frame-s1,5x.webp')
+					1x)
+	) {
+		.promo__video-wrap {
+			background-image: -webkit-image-set(
+				url('../images/gold-frame-s1,5x.webp') 1x
+			);
+		}
+	}
 	.promo__playbtn {
 		width: 66px;
 		height: 66px;
@@ -624,26 +648,50 @@
 }
 @media screen and (max-width: 450px) {
 	.hero {
+		height: 580px;
 		background-image: url('../images/bg-main-xss.png');
+	}
+	@supports (
+		background-image: -webkit-image-set(url('../images/bg-main-xss.webp') 1x)
+	) {
+		.hero {
+			background-image: -webkit-image-set(url('../images/bg-main-xss.webp') 1x);
+		}
 	}
 	.hero__btn-container {
 		margin-top: 95%;
 		justify-self: flex-end;
 	}
+	.featured-news__splide {
+		margin-bottom: 150px;
+	}
+	.featured-news__track {
+		margin-top: 25px;
+	}
+	.featured-item__heading {
+		font-size: 20px;
+	}
+	.featured-news__navigation > .splide__arrows {
+		margin-top: 10px;
+	}
 	.promo {
-		height: 450px;
+		height: 350px;
 	}
 	.promo__playbtn {
 		width: 56px;
 		height: 56px;
-		top: 30vw;
+		top: 28vw;
 		left: 43%;
 	}
 	.game-features {
-		height: 600px;
+		height: 550px;
+		scroll-behavior: smooth;
 	}
 	.game-features__navigation {
 		transform: translateY(-271px);
+	}
+	.game-features__arrows.splide__arrows {
+		margin-top: -55px;
 	}
 	.modal__video {
 		height: 250px;

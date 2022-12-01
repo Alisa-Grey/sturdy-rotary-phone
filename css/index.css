@@ -142,10 +142,10 @@ body {
 	transform: none;
 }
 .splide__arrow--prev {
-	background-image: url(../images/arrow-left.png);
+	background-image: url('../images/arrow-left.png');
 }
 .splide__arrow--next {
-	background-image: url(../images/arrow-right.png);
+	background-image: url('../images/arrow-right.png');
 }
 .splide__pagination {
 	position: static;
@@ -223,10 +223,15 @@ body {
 	align-items: center;
 	width: 100%;
 	height: 1000px;
-	background-image: url(../images/main.png);
+	background-image: url('../images/main.png');
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: contain;
+}
+@supports (background-image: -webkit-image-set(url('../images/main.webp') 1x)) {
+	.hero {
+		background-image: -webkit-image-set(url('../images/main.webp') 1x);
+	}
 }
 .hero__img {
 	z-index: -1;
@@ -238,7 +243,7 @@ body {
 .hero__btn,
 .hero__btn-img {
 	width: 256px;
-	height: 78px;
+	height: 76px;
 	transition: all 0.3s ease-out;
 }
 .hero__btn:not(:last-child) {
@@ -352,13 +357,13 @@ body {
 	display: inline-block;
 	border-radius: 0;
 	background-color: transparent;
-	background-image: url(../images/pagination-bullit.png);
+	background-image: url('../images/pagination-bullit.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	transition: background-image 0.2s ease-out;
 }
 .splide__pagination__page.splide__pagination--custom.is-active {
-	background-image: url(../images/pagination-bullit-active.png);
+	background-image: url('../images/pagination-bullit-active.png');
 }
 
 /* promo */
@@ -371,18 +376,24 @@ body {
 	justify-items: start;
 	width: 100%;
 	height: 870px;
-	/* background-repeat: no-repeat;
-	background-image: url(../images/joe.png);
-	background-position: 110% -3%;
-	background-size: 850px; */
 }
 .promo__video-wrap {
 	position: relative;
 	width: 1000px;
 	height: 90%;
-	background-image: url(../images/gold-frame-preview.png);
+	background-image: url('../images/gold-frame-preview.png');
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+@supports (
+	background-image: -webkit-image-set(url('../images/gold-frame-preview.webp')
+				1x)
+) {
+	.promo__video-wrap {
+		background-image: -webkit-image-set(
+			url('../images/gold-frame-preview.webp') 1x
+		);
+	}
 }
 .promo__video-preview {
 	max-width: 1100px;
@@ -395,7 +406,7 @@ body {
 	width: 96px;
 	height: 96px;
 	border-radius: 50%;
-	background-image: url(../images/playbtn.png);
+	background-image: url('../images/playbtn.png');
 	background-repeat: no-repeat;
 	background-size: contain;
 }
@@ -407,7 +418,6 @@ body {
 }
 /* game features */
 .game-features {
-	/* position: relative; */
 	display: flex;
 	flex-wrap: nowrap;
 	align-content: center;
@@ -416,9 +426,16 @@ body {
 	width: 100%;
 	height: 1100px;
 	margin: 0 auto;
-	background-image: url(../images/fire-frame.png);
+	background-image: url('../images/fire-frame.png');
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+@supports (
+	background-image: -webkit-image-set(url('../images/fire-frame.webp') 1x)
+) {
+	.game-features {
+		background-image: -webkit-image-set(url('../images/fire-frame.webp') 1x);
+	}
 }
 .game-features__track {
 	width: 1600px;
@@ -485,22 +502,22 @@ body {
 	background-repeat: no-repeat;
 }
 .discord {
-	background-image: url(../images/discord.png);
+	background-image: url('../images/discord.png');
 }
 .instagram {
-	background-image: url(../images/instagram.png);
+	background-image: url('../images/instagram.png');
 }
 .facebook {
-	background-image: url(../images/fb.png);
+	background-image: url('../images/fb.png');
 }
 .vk {
-	background-image: url(../images/vk.png);
+	background-image: url('../images/vk.png');
 }
 .reddit {
-	background-image: url(../images/reddit.png);
+	background-image: url('../images/reddit.png');
 }
 .youtube {
-	background-image: url(../images/youtube.png);
+	background-image: url('../images/youtube.png');
 }
 .footer__bottom {
 	font-size: 24px;
@@ -568,11 +585,18 @@ body {
 }
 /* community */
 .community {
-	background-image: url(../images/community-bg.png);
+	background-image: url('../images/community-bg.png');
 	min-height: 100vh;
 	padding-top: 55%;
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+@supports (
+	background-image: -webkit-image-set(url('../images/community-bg.webp') 1x)
+) {
+	.community {
+		background-image: -webkit-image-set(url('../images/community-bg.webp') 1x);
+	}
 }
 .community__wrap,
 .media {
@@ -606,9 +630,16 @@ body {
 }
 .media__top {
 	height: 500px;
-	background-image: url(../images/media-bg.png);
+	background-image: url('../images/media-bg.png');
 	background-size: 100%;
 	background-repeat: no-repeat;
+}
+@supports (
+	background-image: -webkit-image-set(url('../images/media-bg.webp') 1x)
+) {
+	.media__top {
+		background-image: -webkit-image-set(url('../images/media-bg.webp') 1x);
+	}
 }
 .media__heading {
 	padding-top: 15%;
@@ -637,7 +668,9 @@ body {
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	transition: background-image 0.2s ease-out;
+}
+.media-filters__btn > svg > g > path {
+	transition: fill 0.2s ease-out;
 }
 .computer {
 	width: 54px;
@@ -711,10 +744,17 @@ body {
 	width: 100vw;
 	display: flex;
 	flex-wrap: nowrap;
-	background-image: url(../images/mary_bg.png);
+	background-image: url('../images/mary_bg.png');
 	background-repeat: no-repeat;
 	background-size: 60%;
 	background-position: right top;
+}
+@supports (
+	background-image: -webkit-image-set(url('../images/mary_bg.webp') 1x)
+) {
+	.featured {
+		background-image: -webkit-image-set(url('../images/mary_bg.webp') 1x);
+	}
 }
 .featured__content-wrap {
 	display: flex;
@@ -858,9 +898,16 @@ body {
 	min-height: 100vh;
 	margin-bottom: 60px;
 	padding: 150px 0 100px;
-	background-image: url(../images/article-bg.png);
+	background-image: url('../images/article-bg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+@supports (
+	background-image: -webkit-image-set(url('../images/article-bg.webp') 1x)
+) {
+	.article-container {
+		background-image: -webkit-image-set(url('../images/article-bg.webp') 1x);
+	}
 }
 .news-item.article {
 	display: block;
