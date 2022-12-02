@@ -31,8 +31,8 @@
 			as="style"
 			onload="this.onload=null;this.rel='stylesheet'"
 		/>
-		<script src="components/header.js" type="text/javascript" defer></script>
-		<script src="components/footer.js" type="text/javascript" defer></script>
+		<script src="components/header.js" defer></script>
+		<script src="components/footer.js" defer></script>
 		<link rel="stylesheet" href="css/index.css" />
 		<link
 			rel="stylesheet"
@@ -43,11 +43,11 @@
 	</head>
 
 	<body>
-		<div class="wrap">
+		<div class="wrap flex-col">
 			<header-component></header-component>
 			<main class="main-content main-page">
 				<div class="content-wrap">
-					<section class="hero">
+					<section class="hero flex-col">
 						<div class="hero__btn-container">
 							<a
 								href="https://play.google.com/store/apps/details?id=com.alicegames.idle.rpg.battler&hl=en&gl=US"
@@ -203,8 +203,12 @@
 						</div>
 						<picture>
 							<source type="image/webp" srcset="./images/joe.webp" />
-							<img src="./images/joe.png" alt="" class="promo__img" />
 							<source type="image/png" srcset="./images/joe.png" />
+							<img
+								src="./images/joe.png"
+								alt="Darkest AFK character Joseph"
+								class="promo__img"
+							/>
 						</picture>
 					</section>
 
@@ -312,12 +316,20 @@
 								</div>
 							</div>
 						</div>
-						<img src="./images/flame-s.png" class="game-features__img" />
+						<img
+							src="./images/flame-s.png"
+							class="game-features__img"
+							alt="flames"
+						/>
 					</section>
 				</div>
 				<div></div>
 			</main>
-			<img src="./images/animation_mimic.png" alt="" class="footer__img" />
+			<img
+				src="./images/animation_mimic.png"
+				alt="Angry chest"
+				class="footer__img"
+			/>
 			<footer-component></footer-component>
 		</div>
 

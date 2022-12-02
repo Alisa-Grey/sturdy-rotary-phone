@@ -312,7 +312,7 @@
 		width: 40px;
 	}
 	.burger-container:hover > .hamburger-lines > .line {
-		background-color: rgba(229, 255, 96, 0.8);
+		background-color: rgba(183, 131, 19, 0.541);
 	}
 	.toggle-menu {
 		position: absolute;
@@ -366,7 +366,7 @@
 		background-color: rgba(0, 0, 0, 0.9);
 		z-index: 2;
 		transform: translateY(-200%);
-		transition: 0 0.3s ease-out;
+		transition: all 0.3s ease-out;
 	}
 	.nav.is-active {
 		transform: none;
@@ -702,11 +702,21 @@
 		background-size: contain;
 	}
 	/* news page */
+	.filters {
+		padding-left: 10px;
+		padding-right: 10px;
+		text-align: center;
+	}
 	.filter-btn {
 		font-size: 5vw;
 	}
+	.filter-btn:not(:nth-child(2)),
 	.filter-btn:not(:last-child) {
 		margin-right: 15px;
+	}
+	.filter-btn:nth-child(2),
+	.filter-btn:last-child {
+		margin-right: 0;
 	}
 	.news-list {
 		width: 100%;
