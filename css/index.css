@@ -434,14 +434,15 @@ body {
 }
 .promo__playbtn {
 	position: absolute;
-	top: 46%;
-	left: 48%;
+	top: 50%;
+	left: 50%;
 	width: 96px;
 	height: 96px;
 	border-radius: 50%;
 	background-image: url('../images/playbtn.png');
 	background-repeat: no-repeat;
 	background-size: contain;
+	transform: translate(-50%, -50%);
 }
 .promo__img {
 	position: absolute;
@@ -983,11 +984,13 @@ body {
 .header__logo:hover > img,
 .hero__btn:hover > img,
 .play-link:hover,
-.promo__playbtn:hover,
 .media-filters__btn:hover,
 .footer-links__item:hover > .footer-links__link,
 .gallery-item__img:hover {
 	transform: scale(1.1, 1.1);
+}
+.promo__playbtn:hover {
+	transform: translate(-50%, -50%) scale(1.1, 1.1);
 }
 .img-wrap:hover,
 .featured__content-wrap > .featured__item > .featured-item__img:hover {

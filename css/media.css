@@ -17,10 +17,6 @@
 	.promo__video-wrap {
 		width: 850px;
 	}
-	.promo__playbtn {
-		top: 41%;
-		left: 47%;
-	}
 	.promo__img {
 		right: -40px;
 		bottom: 250px;
@@ -93,7 +89,6 @@
 	.promo__playbtn {
 		width: 76px;
 		height: 76px;
-		top: 42%;
 	}
 	.promo__img {
 		right: -4vw;
@@ -428,7 +423,7 @@
 		padding: 50px 30px 20vw;
 	}
 	.featured__item {
-		height: 200px !important;
+		height: 350px !important;
 	}
 	.featured__heading {
 		font-size: 8vw;
@@ -636,8 +631,7 @@
 	}
 	/* media */
 	.gallery {
-		display: flex;
-		flex-direction: column;
+		grid-template-columns: 1fr;
 	}
 	.media__top {
 		height: 200px;
@@ -680,8 +674,6 @@
 	.promo__playbtn {
 		width: 56px;
 		height: 56px;
-		top: 28vw;
-		left: 43%;
 	}
 	.game-features {
 		height: 550px;
@@ -735,6 +727,9 @@
 	.filter-btn {
 		margin-bottom: 15px;
 	}
+	.featured__item {
+		height: 250px !important;
+	}
 	/* news article */
 	.article-container {
 		padding-top: 60px;
@@ -763,11 +758,13 @@
 		padding: 0 0 50px;
 	}
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
 	.promo__playbtn {
-		top: 19%;
-		left: 41%;
+		top: 44%;
+		left: 50%;
 	}
+}
+@media screen and (max-width: 350px) {
 	.game-features__list {
 		transform: translateX(0%);
 	}
