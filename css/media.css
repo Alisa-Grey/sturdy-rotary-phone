@@ -55,7 +55,7 @@
 		font-size: 20px;
 	}
 	/* news page */
-	.featured {
+	.featured-section {
 		background-size: 65%;
 		background-position: right -100%;
 	}
@@ -120,7 +120,7 @@
 		height: auto;
 	}
 	/* news page */
-	.featured {
+	.featured-section {
 		background-size: 70vw;
 	}
 	.featured-_heading {
@@ -182,7 +182,7 @@
 		right: 4vw;
 	}
 	/* news page */
-	.featured {
+	.featured-section {
 		background-size: 75vw;
 	}
 	.filter-btn {
@@ -412,7 +412,7 @@
 		height: 350px;
 	}
 	/* news page */
-	.featured {
+	.featured-section {
 		background-image: url('../images/ice.png');
 		background-size: contain;
 		background-position: 0 bottom;
