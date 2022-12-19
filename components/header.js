@@ -11,7 +11,7 @@ class Header extends HTMLElement {
         href="https://darkestafk.com/"
         aria-label="Darkest AFK"
       >
-        <img src="./images/logo.png"/>
+        <img class='header__logo-img' src="./images/logo.png"/ alt='DarkestAFK logo'>
       </a>
       <div class='burger-container'>
       <input
