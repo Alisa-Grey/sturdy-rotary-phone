@@ -405,38 +405,41 @@
 		margin-bottom: 30px;
 	}
 	.hero {
+		height: 850px;
 		background-image: url('../images/bg-main-s1.png');
-		background-size: cover;
+		background-size: 110%;
 		background-position-y: -200px;
 	}
 	@supports (
 		background-image: -webkit-image-set(url('../images/bg-main-s1.webp') 1x)
 	) {
-		.heros {
+		.hero {
 			background-image: -webkit-image-set(url('../images/bg-main-s1.webp') 1x);
 		}
 	}
 	.hero__btn-container {
-		margin-top: 80%;
+		margin-top: 90%;
 	}
 	.hero__btn-img {
 		box-shadow: -1px -2px 0px 0px #ffc31f;
 	}
+	.game-features {
+		height: 730px;
+	}
 	.game-features__track {
 		width: calc(100vw - 50px);
-		margin-top: -39%;
 	}
 	.game-features__list {
-		transform: translateX(8%);
+		transform: translateX(11%);
 	}
 	.game-features__slide {
 		margin-left: 20px !important;
 	}
 	.game-features__slide img {
-		height: 68% !important;
+		height: 65% !important;
 	}
 	.game-features__navigation {
-		padding-right: 8%;
+		transform: translate(4%, -120px);
 	}
 	.modal__video {
 		width: 88vw;
@@ -515,8 +518,8 @@
 		padding-right: 25px;
 	}
 	.header__logo,
-	.header__logo > img {
-		width: 64px;
+	.header__logo-img {
+		width: 74px;
 	}
 	.burger-container {
 		height: 26px;
@@ -533,40 +536,52 @@
 		width: 105px;
 	}
 	.hero {
-		background-size: 130%;
-		background-position-y: -140px;
+		background-size: 140%;
+		background-position-y: -30vw;
 	}
-	.hero__btn-container {
+	.hero__btn-container,
+	.cta {
 		display: flex;
 		flex-direction: column;
-		margin-top: 80%;
+	}
+	.hero__btn-container {
+		margin-top: 120%;
 	}
 	.hero__btn {
 		width: 100%;
+		height: 64px;
 	}
-	.hero__btn:not(:last-child) {
+	.cta__btn {
+		height: 76px;
+	}
+	.hero__btn:not(:last-child),
+	.cta__btn:not(:last-child) {
 		margin-right: 0;
 		margin-bottom: 20px;
 	}
 	.hero__btn-img {
-		width: 180px;
+		width: 210px;
 	}
 	.featured-news__heading {
 		justify-self: flex-end;
 		margin-top: auto;
 		margin-bottom: 0;
-		font-size: 32px;
+		font-size: 30px;
+		margin-bottom: 30px;
 	}
 	.featured-news__track {
-		padding: 10px 20px 0 !important;
+		padding: 10px 0 0 !important;
 	}
-
 	.featured-news__track,
 	.featured-news__list {
-		width: 95%;
+		width: 98%;
+	}
+	.featured-news__item:not(:last-child) {
+		margin-right: 10px !important;
 	}
 	.featured-news__navigation {
 		width: 100%;
+		transform: translate(5px, -35px);
 	}
 	.img-wrap,
 	.hero > .featured__item {
@@ -576,7 +591,7 @@
 		font-size: 22px;
 	}
 	.promo {
-		height: 500px;
+		height: 450px;
 		margin-bottom: 50px;
 	}
 	.promo__video-wrap {
@@ -599,13 +614,18 @@
 		height: 66px;
 	}
 	.game-features {
+		padding-top: 0;
 		background-image: none;
+	}
+	.game-features__content {
+		height: 550px;
+		transform: translate(12px, 20px);
 	}
 	.game-features__track {
 		margin-top: 5%;
 	}
 	.game-features__list {
-		transform: translateX(1%);
+		transform: translate(1%, 60px);
 	}
 	.game-features__slide img {
 		width: 86vw;
@@ -616,8 +636,9 @@
 		border-radius: 19px;
 	}
 	.game-features__navigation {
-		transform: translateY(-120px);
 		padding-right: 0;
+		padding-left: 0;
+		transform: translate(-11px, -120px);
 	}
 	.game-features__pagination > li:not(:last-child) {
 		margin-right: 10px;
@@ -672,23 +693,36 @@
 	}
 }
 @media screen and (max-width: 450px) {
+	.header {
+		padding: 20px;
+	}
+	.header__logo,
+	.header__logo-img {
+		width: 80px;
+	}
+	.play-link {
+		display: none;
+	}
 	.hero {
 		height: 580px;
-		background-image: url('../images/bg-main-xss.png');
+		background-size: 148%;
+		background-position: -23vw -44vw;
 	}
-	@supports (
+	/* @supports (
 		background-image: -webkit-image-set(url('../images/bg-main-xss.webp') 1x)
 	) {
 		.hero {
 			background-image: -webkit-image-set(url('../images/bg-main-xss.webp') 1x);
 		}
-	}
+	} */
 	.hero__btn-container {
-		margin-top: 95%;
+		margin-top: 155%;
 		justify-self: flex-end;
 	}
 	.featured-news__splide {
-		margin-bottom: 150px;
+		height: 550px;
+		margin-bottom: 120px;
+		transform: translate(8px, 150px);
 	}
 	.featured-news__track {
 		margin-top: 25px;
@@ -696,8 +730,17 @@
 	.featured-item__heading {
 		font-size: 20px;
 	}
+	.featured-news__navigation {
+		transform: translate(-7px, 0px);
+	}
 	.featured-news__navigation > .splide__arrows {
 		margin-top: 10px;
+	}
+	.img-wrap {
+		border-width: 5px;
+	}
+	.img-wrap::before {
+		margin: -9px;
 	}
 	.promo {
 		height: 350px;
@@ -707,14 +750,29 @@
 		height: 56px;
 	}
 	.game-features {
-		height: 550px;
+		height: 500px;
 		scroll-behavior: smooth;
 	}
+	.game-features__content {
+		height: 400px;
+		transform: translate(0, 20px);
+	}
+	.game-features__slide img {
+		padding: 20px;
+	}
 	.game-features__navigation {
-		transform: translateY(-271px);
+		transform: translateY(-50vw);
 	}
 	.game-features__arrows.splide__arrows {
 		margin-top: -55px;
+	}
+	.cta__heading {
+		font-size: 26px;
+	}
+	.cta__btn,
+	.cta__btn-img {
+		width: 220px;
+		height: 66px;
 	}
 	.modal__video {
 		height: 250px;
@@ -790,21 +848,80 @@
 	}
 }
 @media screen and (max-width: 400px) {
+	.featured-news__heading {
+		margin-bottom: 0;
+	}
+	.featured-news__splide {
+		transform: translate(8px, 115px);
+	}
 	.promo__playbtn {
 		top: 44%;
 		left: 50%;
 	}
+	.section-heading {
+		font-size: 23px;
+	}
+	.game-features__navigation {
+		transform: translateY(-63vw);
+	}
 }
 @media screen and (max-width: 350px) {
+	.hero {
+		background-size: 150%;
+		background-position: -23vw -44vw;
+	}
+	.hero__btn,
+	.hero__btn-img,
+	.cta__btn,
+	.cta__btn-img {
+		width: 190px;
+		height: 57px;
+	}
+	.featured-news__splide {
+		height: 440px;
+		transform: translate(4px, 70px);
+	}
+	.featured-news__navigation {
+		transform: none;
+	}
+	.promo,
+	.game-features {
+		height: 320px;
+	}
+	.promo__playbtn {
+		top: 39%;
+		width: 46px;
+		height: 46px;
+	}
+	.game-features {
+		margin-bottom: 50px;
+	}
+	.game-features__content,
+	.game-features__splide,
+	.game-features__track {
+		height: 270px;
+	}
+	.game-features__content {
+		transform: translate(0, -25px);
+	}
 	.game-features__list {
 		transform: translateX(0%);
 	}
 	.game-features__slide img {
 		width: 84vw;
+		padding: 15px;
+	}
+	.game-features__navigation {
+		margin-top: 10px;
+		transform: none;
 	}
 	.game-features__pagination {
 		margin-left: 20px;
 		margin-right: 20px;
+	}
+	.cta__heading {
+		font-size: 22px;
+		margin-bottom: 20px;
 	}
 	.footer-links {
 		flex-wrap: wrap;
@@ -812,9 +929,11 @@
 	.footer-links__item {
 		margin-bottom: 20px;
 	}
+	.footer-links__item:nth-child(4),
 	.footer-links__item:last-child {
-		margin-right: 15px;
+		margin-right: 0;
 	}
+
 	.media__top {
 		height: 170px;
 	}
