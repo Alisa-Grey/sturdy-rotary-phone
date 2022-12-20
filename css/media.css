@@ -743,17 +743,16 @@
 		margin-bottom: 50px;
 	}
 	.promo__video-wrap {
-		background-image: url('../images/gold-frame-s1,5x.png');
+		background-image: url('../images/gold-frame-s1.png');
 		background-size: 103%;
 		background-position-x: -4px;
 	}
 	@supports (
-		background-image: -webkit-image-set(url('../images/gold-frame-s1,5x.webp')
-					1x)
+		background-image: -webkit-image-set(url('../images/gold-frame-s1.webp') 1x)
 	) {
 		.promo__video-wrap {
 			background-image: -webkit-image-set(
-				url('../images/gold-frame-s1,5x.webp') 1x
+				url('../images/gold-frame-s1.webp') 1x
 			);
 		}
 	}
