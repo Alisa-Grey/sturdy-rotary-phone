@@ -24,6 +24,12 @@
 			name="description"
 			content="You will plunge into the atmosphere of a classic RPG with unique gameplay and characters. Go up against other players in a PVP mode, join the battle against ancient evil beings in the Utopia of Dragons, and defeat mighty foes in the Tower of Darkness."
 		/>
+		<link
+			rel="preload"
+			href="./css/splide.min.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
 		<link rel="stylesheet" href="./css/index.css" />
 		<link
 			rel="stylesheet"
@@ -80,7 +86,7 @@
 				</section>
 				<!-- latest, not featured news -->
 				<section
-					class="splide featured-news__splide content-wrap"
+					class="splide featured-news featured-news__splide content-wrap"
 					id="news-splide"
 				>
 					<div class="splide__track featured-news__track">
@@ -164,6 +170,7 @@
 			</main>
 			<footer-component></footer-component>
 		</div>
+		<script src="./js/splide.min.js"></script>
 		<script src="./js/main.js"></script>
 		<script>
 			document.addEventListener('DOMContentLoaded', () => {
