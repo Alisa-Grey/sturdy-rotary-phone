@@ -321,6 +321,9 @@ body {
 	margin-top: auto;
 	margin-bottom: 30px;
 }
+.home-page-feature.featured-news__splide {
+	width: 85vw;
+}
 .featured-news__track,
 .featured-news__list {
 	width: 100%;
@@ -331,13 +334,6 @@ body {
 .featured-news__list {
 	margin: 0 auto !important;
 }
-.featured-news__item {
-	width: 33% !important;
-}
-.featured-news__item:not(:last-child) {
-	margin-right: 30px;
-}
-
 .img-wrap,
 .featured__item {
 	box-sizing: content-box;
@@ -389,8 +385,8 @@ body {
 	background: linear-gradient(to top, #f74600, #f8cf42);
 }
 .featured-news__navigation {
-	align-self: center;
 	position: static;
+	align-self: center;
 	width: 70%;
 	margin: 0 auto;
 }
@@ -470,7 +466,7 @@ body {
 /* game features */
 .game-features {
 	width: 100%;
-	height: 1000px;
+	height: 950px;
 	margin: 0 auto;
 	padding-top: 50px;
 	background-image: url('../images/fire-frame.png');
@@ -493,31 +489,26 @@ body {
 .game-features__content {
 	display: flex;
 	flex-wrap: nowrap;
+	font-display: column;
 	align-content: center;
-	justify-content: start;
+	justify-content: center;
 	align-items: center;
-	height: 840px;
+	height: 770px;
 	margin: 0 auto;
-	transform: translateY(50px);
 }
 .game-features__track {
-	width: 1600px;
-	transform: translateY(-130px);
+	max-width: 780px;
+	height: auto;
 }
 .game-features__slide {
-	width: 1024px !important;
-	height: 636px;
+	padding-top: 40px;
 }
 .game-features__slide img {
 	height: 90% !important;
 }
-.game-features__list {
-	transform: translateX(26.1%);
-}
 .game-features__navigation {
 	position: static;
 	margin: 0 auto;
-	margin-top: -6vw;
 	width: max-content;
 }
 .game-features__arrows {
