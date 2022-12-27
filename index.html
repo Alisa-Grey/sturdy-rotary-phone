@@ -214,75 +214,82 @@
 							/>
 						</picture>
 					</section>
+				</div>
 
-					<section class="game-features">
-						<h2 class="game-features__heading section-heading">
-							Game features
-						</h2>
-						<div class="game-features__content">
-							<div
-								class="splide game-features__splide"
-								id="game-features-splide"
-							>
-								<div class="splide__track game-features__track">
-									<ul class="splide__list game-features__list">
-										<li class="splide__slide game-features__slide">
+				<section class="game-features">
+					<h2 class="game-features__heading section-heading">Game features</h2>
+					<div class="game-features__content">
+						<div class="splide game-features__splide" id="game-features-splide">
+							<div class="splide__track game-features__track">
+								<ul class="splide__list game-features__list">
+									<li class="splide__slide game-features__slide">
+										<picture>
+											<source
+												media="(max-width: 1500px)"
+												srcset="./images/small/Darkest_AFK_opt-2_P1_h450.jpg"
+											/>
+											<source
+												media="(min-width: 1501px)"
+												srcset="./images/small/Darkest_AFK_opt-2_P1.jpg"
+											/>
 											<img
 												src="./images//small/Darkest_AFK_opt-2_P1.jpg"
 												alt="Utopia of dragons"
 											/>
-										</li>
-										<li class="splide__slide game-features__slide">
-											<img
-												src="./images//small/Darkest_AFK_opt-2_P2.jpg"
-												alt="PvP battles"
-											/>
-										</li>
-										<li class="splide__slide game-features__slide">
-											<img
-												src="./images//small/Darkest_AFK_opt-2_P3.jpg"
-												alt="Tower of darkness"
-											/>
-										</li>
-										<li class="splide__slide game-features__slide">
-											<img
-												src="./images//small/Darkest_AFK_opt-2_P4.jpg"
-												alt="Epic bosses"
-											/>
-										</li>
-										<li class="splide__slide game-features__slide">
-											<img
-												src="./images//small/Darkest_AFK_opt-2_P5.jpg"
-												alt="Powerfull spells"
-											/>
-										</li>
-									</ul>
-								</div>
-								<div class="splide-navigation game-features__navigation">
-									<div class="splide__arrows game-features__arrows">
-										<button
-											class="splide__arrow splide__arrow--prev"
-											aria-label="Previos slide"
-										></button>
-										<ul
-											class="splide__pagination splide__pagination--ltr game-features__pagination"
-											role="tablist"
-											aria-label="Select a slide to show"
-										></ul>
-										<button
-											class="splide__arrow splide__arrow--next"
-											aria-label="Next slide"
-										></button>
-									</div>
+										</picture>
+									</li>
+									<li class="splide__slide game-features__slide">
+										<img
+											src="./images//small/Darkest_AFK_opt-2_P2.jpg"
+											alt="PvP battles"
+										/>
+									</li>
+									<li class="splide__slide game-features__slide">
+										<img
+											src="./images//small/Darkest_AFK_opt-2_P3.jpg"
+											alt="Tower of darkness"
+										/>
+									</li>
+									<li class="splide__slide game-features__slide">
+										<img
+											src="./images//small/Darkest_AFK_opt-2_P4.jpg"
+											alt="Epic bosses"
+										/>
+									</li>
+									<li class="splide__slide game-features__slide">
+										<img
+											src="./images//small/Darkest_AFK_opt-2_P5.jpg"
+											alt="Powerfull spells"
+										/>
+									</li>
+								</ul>
+							</div>
+							<div class="splide-navigation game-features__navigation">
+								<div class="splide__arrows game-features__arrows">
+									<button
+										class="splide__arrow splide__arrow--prev"
+										aria-label="Previos slide"
+									></button>
+									<ul
+										class="splide__pagination splide__pagination--ltr game-features__pagination"
+										role="tablist"
+										aria-label="Select a slide to show"
+									></ul>
+									<button
+										class="splide__arrow splide__arrow--next"
+										aria-label="Next slide"
+									></button>
 								</div>
 							</div>
-							<img
-								class="game-features__img"
-								src="./images/flame-s.png"
-								alt="flames"
-							/>
 						</div>
-					</section>
+						<img
+							class="game-features__img"
+							src="./images/flame-s.png"
+							alt="flames"
+						/>
+					</div>
+				</section>
+				<div class="content-wrap">
 					<h2 class="cta__heading section-heading">Download Darkest AFK</h2>
 					<div class="cta">
 						<a
@@ -334,9 +341,9 @@
 					type: 'slide',
 					rewind: true,
 					perPage: 3,
-					gap: 45,
+					gap: 50,
 					breakpoints: {
-						1300: {
+						1400: {
 							perPage: 2,
 							gap: 60,
 						},

@@ -29,19 +29,21 @@
 		top: 45%;
 		left: 53%;
 	}
-	.game-features__content,
-	.game-features__splide {
-		height: 600px;
+	.game-features {
+		height: 890px;
 	}
 	.game-features__track {
-		max-width: 650px;
-		height: 530px;
+		max-width: 700px;
 	}
 	.game-features__slide {
-		padding-top: var(--gap-med);
+		padding-top: 0;
+	}
+	.game-features__slide img {
+		height: 80% !important;
 	}
 	.game-features__navigation {
 		width: max-content;
+		transform: translateY(-10px);
 	}
 	.footer-links__item {
 		width: 76px;
@@ -98,17 +100,18 @@
 		width: 42vw;
 	}
 	.game-features {
-		background-size: 110%;
-		background-position-x: -50px;
+		height: 800px;
 	}
 	.game-features__track {
-		max-width: 600px;
+		max-width: 660px;
+		height: 650px;
 	}
-	.game-features__slide {
-		padding-top: 37px;
+	.game-features__slide img {
+		height: 75% !important;
 	}
-	.game-features__arrows.splide__arrows {
-		margin-top: -20px;
+	.game-features__navigation {
+		width: max-content;
+		transform: translateY(-120px);
 	}
 	.splide__arrow {
 		width: 36px;
@@ -221,6 +224,7 @@
 		width: 41vw;
 	}
 	.game-features {
+		width: 1000px;
 		height: 800px;
 		background-image: url('../images/screenframe.png');
 		background-size: 80%;
@@ -232,6 +236,13 @@
 		.game-features {
 			background-image: -webkit-image-set(url('../images/screenframe.webp') 1x);
 		}
+	}
+	.game-features__content {
+		height: 730px;
+	}
+	.game-features__track {
+		max-width: 590px;
+		height: 614px;
 	}
 	.footer__img {
 		right: 4vw;
@@ -317,6 +328,9 @@
 	.featured-item__heading {
 		font-size: 2.5vw;
 	}
+	.promo {
+		height: 550px;
+	}
 	.promo__video-wrap {
 		margin-top: -50px;
 	}
@@ -325,14 +339,23 @@
 		display: none;
 	}
 	.game-features {
-		background-size: 100%;
+		height: 700px;
+		background-size: 75%;
+	}
+	.game-features__content {
+		height: 580px;
+		margin-top: 70px;
 	}
 	.game-features__track {
-		max-width: 560px;
+		max-width: 580px;
 	}
 	.game-features__slide img {
-		height: 85% !important;
+		height: 70% !important;
 	}
+	.game-features__navigation {
+		transform: translateY(-150px);
+	}
+
 	/* news page */
 	.featured {
 		background-size: 90%;
@@ -409,10 +432,24 @@
 		}
 	}
 }
+@media screen and (max-width: 950px) {
+	.game-features {
+		width: 90vw;
+		height: 750px;
+		background-size: 100%;
+	}
+	.game-features__navigation {
+		transform: translateY(-100px);
+	}
+}
 @media screen and (max-width: 800px) {
 	.splide__arrow {
-		width: 20px;
-		height: 34px;
+		width: 24px;
+		height: 36px;
+	}
+	.splide__pagination__page.splide__pagination--custom {
+		width: 18px;
+		height: 18px;
 	}
 	.section-heading {
 		font-size: 1.5rem;
@@ -515,6 +552,10 @@
 	.home-page-feature .featured-news__track {
 		margin-top: var(--gap-med);
 	}
+	.promo {
+		align-items: center;
+		margin-bottom: 0;
+	}
 	@media screen and (orientation: landscape) {
 		.promo {
 			height: 530px;
@@ -525,13 +566,13 @@
 		height: 350px;
 	}
 	.game-features__track {
-		max-width: 550px;
-	}
-	.game-features__slide {
-		padding-top: 10px;
+		max-width: 540px;
 	}
 	.game-features__slide img {
-		height: 80% !important;
+		height: 65% !important;
+	}
+	.game-features__navigation {
+		transform: translateY(-160px);
 	}
 	/* news page */
 	.featured {
@@ -610,10 +651,6 @@
 	}
 }
 @media screen and (max-width: 600px) {
-	.splide__pagination__page.splide__pagination--custom {
-		width: 18px;
-		height: 18px;
-	}
 	.header {
 		padding-left: 25px;
 		padding-right: 25px;
@@ -898,6 +935,9 @@
 	.game-features__splide {
 		height: 350px;
 	}
+	.game-features__content {
+		margin-top: 0;
+	}
 	.game-features__track {
 		width: 86vw;
 		height: 80vw;
@@ -905,6 +945,9 @@
 	.game-features__slide img {
 		width: 85vw;
 		padding: 20px;
+	}
+	.game-features__navigation {
+		transform: translateY(-50px);
 	}
 	.game-features__pagination {
 		margin-left: 20px;
@@ -1126,5 +1169,20 @@
 	}
 	.featured-news.featured-news__splide {
 		width: 100vw;
+	}
+}
+@media screen and (max-width: 350px) {
+	.home-page-feature.featured-news__splide {
+		height: 350px;
+		margin-bottom: 0;
+	}
+	.game-features {
+		height: 340px;
+	}
+	.game-features__navigation {
+		transform: translateY(-30px);
+	}
+	.footer-links__item:not(:last-child) {
+		margin-right: 15px;
 	}
 }
