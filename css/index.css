@@ -708,6 +708,8 @@ body {
 .media__heading {
 	padding-top: 200px;
 	color: #eee;
+	text-align: center;
+	text-transform: uppercase;
 }
 .filters-wrap {
 	width: 100vw;
